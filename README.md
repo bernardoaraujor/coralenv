@@ -1,6 +1,6 @@
 # trapezia-rs
 
-![crab](https://upload.wikimedia.org/wikipedia/commons/9/95/Trapezia_tigrina_-_Red_Spotted_Guard_Crab.jpg)
+[<img src="trapezia.jpg">](https://en.wikipedia.org/wiki/Trapezia)
 
 Rust drivers for the [Google Coral Environmental Sensor Board](https://coral.ai/docs/enviro-board/datasheet) using the [`linux-embedded-hal`](https://github.com/rust-embedded/linux-embedded-hal) trait.
 
