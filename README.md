@@ -1,4 +1,4 @@
-# trapezia-rs
+# Rusty Coral Envinronmental Sensor
 
 [<img src="trapezia.jpg">](https://en.wikipedia.org/wiki/Trapezia)
 
