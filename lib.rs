@@ -7,7 +7,8 @@ extern crate nb;
 
 use i2cdev::sensors::{Barometer};
 
-pub fn temperature() -> f32 {
+#[no_mangle]
+pub extern "C" fn temperature() -> f32 {
     let dev_i2c = hal::I2cdev::new("/dev/i2c-1").unwrap();
     let hdc2010_addr = hdc20xx::SlaveAddr::default();
     let mut hdc2010_sensor = hdc20xx::Hdc20xx::new(dev_i2c, hdc2010_addr);
@@ -16,7 +17,8 @@ pub fn temperature() -> f32 {
     return hdc2010_data.temperature;
 }
 
-pub fn humidity() -> f32 {
+#[no_mangle]
+pub extern "C" fn humidity() -> f32 {
     let dev_i2c = hal::I2cdev::new("/dev/i2c-1").unwrap();
     let hdc2010_addr = hdc20xx::SlaveAddr::default();
     let mut hdc2010_sensor = hdc20xx::Hdc20xx::new(dev_i2c, hdc2010_addr);
@@ -25,7 +27,8 @@ pub fn humidity() -> f32 {
     return hdc2010_data.humidity.unwrap();
 }
 
-pub fn light() -> f32 {
+#[no_mangle]
+pub extern "C" fn light() -> f32 {
     let dev_i2c = hal::I2cdev::new("/dev/i2c-1").unwrap();
     let opt3002_addr = opt300x::SlaveAddr::Alternative(false, true);
     let mut opt3002_sensor = opt300x::Opt300x::new_opt3002(dev_i2c, opt3002_addr);
@@ -35,7 +38,8 @@ pub fn light() -> f32 {
     return opt3002_data.result;
 }
 
-pub fn pressure() -> f32 {
+#[no_mangle]
+pub extern "C" fn pressure() -> f32 {
     let mut dev = bmp280::Bmp280Builder::new()
         .path("/dev/i2c-1".to_string())
         .address(0x76)
