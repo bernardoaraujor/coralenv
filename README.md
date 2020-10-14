@@ -13,9 +13,9 @@ The crate bundles together drivers that allow readings from:
 
 Simply declare `extern crate coral_env`, then call one of the four functions:
 - `coral_env::temperature()`
-- `coral_env::temperature()`
-- `coral_env::temperature()`
-- `coral_env::temperature()`
+- `coral_env::humidity()`
+- `coral_env::light()`
+- `coral_env::pressure()`
 
 All functions will return a `f32` with the respective reading.
 For example:
