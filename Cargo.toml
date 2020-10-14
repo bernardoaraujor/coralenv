@@ -17,8 +17,8 @@ include = [
 
 [dependencies]
 linux-embedded-hal = "0.3"
-shared-bus = "0.2.0"
 hdc20xx = "0.1.0"
 opt300x = "0.1.0"
-bmp280 = "0.2.1"
+bmp280 = { git = "https://github.com/natemara/bmp280" }
+i2cdev = "0.3.0"
 nb = "0.1"
