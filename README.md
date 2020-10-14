@@ -2,7 +2,7 @@
 
 [<img src="trapezia.jpg">](https://en.wikipedia.org/wiki/Trapezia)
 
-Rust drivers for the [Google Coral Environmental Sensor Board](https://coral.ai/docs/enviro-board/datasheet). Developed on a Raspberry Pi.
+Rust drivers for the [Google Coral Environmental Sensor Board](https://coral.ai/docs/enviro-board/datasheet). Developed on a Raspberry Pi. Provides C bindings.
 
 The crate bundles together drivers that allow readings from:
 - **Humidity + Temperature**: [Texas Instruments HDC2010](https://www.ti.com/lit/ds/symlink/hdc2010.pdf) with help from [`hdc20xx`](https://crates.io/crates/hdc20xx) crate.
@@ -36,6 +36,18 @@ Temperature: 41.38214 °C
 Humidity: 23.078918 %
 Ambient Light: 70.72 lux
 Pressure: 100.26103 kPa
+```
+
+# C bindings
+`Makefile` and `main.c` show how to link against `target/debug/libcoralenv.a`.
+
+```
+$ make
+$ ./main 
+Temperature: 37.575378 °C
+Humidity: 26.179504 %
+Ambient Light: 70.800003 lux
+Pressure: 100.337738 kPa
 ```
 
 **Warning** ⚠️
