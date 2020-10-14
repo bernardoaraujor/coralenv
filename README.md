@@ -9,6 +9,35 @@ The crate bundles together drivers that allow readings from:
 - **Ambient Light**: [Texas Instruments OPT3002](https://www.ti.com/lit/ds/symlink/opt3002.pdf) with help from [`opt300x`](https://crates.io/crates/opt300x) crate.
 - **Barometric Pressure**: [Bosch BMP280](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf) with help from [`bmp280`](https://crates.io/crates/bmp280) crate.
 
+# Usage
+
+Simply declare `extern crate coral_env`, then call one of the four functions:
+- `coral_env::temperature()`
+- `coral_env::temperature()`
+- `coral_env::temperature()`
+- `coral_env::temperature()`
+
+All functions will return a `f32` with the respective reading.
+For example:
+```
+extern crate coral_env;
+
+fn main() {
+    println!("Temperature: {} °C", coral_env::temperature());
+    println!("Humidity: {} %", coral_env::humidity());
+    println!("Ambient Light: {} lux", coral_env::light());
+    println!("Pressure: {} kPa", coral_env::pressure());
+}
+```
+
+which generates:
+```
+Temperature: 41.38214 °C
+Humidity: 23.078918 %
+Ambient Light: 70.72 lux
+Pressure: 100.26103 kPa
+```
+
 **Warning** ⚠️
 
 I'm a total Rust n00b. This crate is just a small experiment, and things are silly and ugly.
