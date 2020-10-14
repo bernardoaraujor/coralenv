@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "coral_env.h"
+#include "coralenv.h"
 
 int main(int argc, char *argv[]) {
     printf("Temperature: %f °C\n", temperature());
