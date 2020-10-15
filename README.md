@@ -11,7 +11,12 @@ The crate bundles together drivers that allow readings from:
 
 # Usage
 
-Simply declare `extern crate coralenv`, then call one of the four functions:
+You will need to explicitly list the following under `[dependencies]` in your `Cargo.toml`:
+```
+coralenv = { git = "https://github.com/bernardoaraujor/coralenv", branch = "main"}
+```
+
+Then, simply declare `extern crate coralenv;`, and call one of the four functions:
 - `coralenv::temperature()`
 - `coralenv::humidity()`
 - `coralenv::light()`
