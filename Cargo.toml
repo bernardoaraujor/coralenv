@@ -1,5 +1,5 @@
 [package]
-name = "coral-env"
+name = "coralenv"
 version = "0.1.0"
 authors = ["Bernardo A. Rodrigues <bernardoaraujor@gmail.com>"]
 repository = "https://github.com/bernardoaraujor/trapezia-rs"
