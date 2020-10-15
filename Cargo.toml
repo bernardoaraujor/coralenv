@@ -1,8 +1,8 @@
 [package]
-name = "coral-env"
+name = "coralenv"
 version = "0.1.0"
 authors = ["Bernardo A. Rodrigues <bernardoaraujor@gmail.com>"]
-repository = "https://github.com/bernardoaraujor/trapezia-rs"
+repository = "https://github.com/bernardoaraujor/coralenv"
 license = "MIT"
 description = "Rust drivers for Coral Environmental Sensor Board (HDC2010, OPT3002 and BMP280)."
 readme = "README.md"
