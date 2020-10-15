@@ -1,8 +1,8 @@
-extern crate coral_env;
+extern crate coralenv;
 
 fn main() {
-    println!("Temperature: {} °C", coral_env::temperature());
-    println!("Humidity: {} %", coral_env::humidity());
-    println!("Ambient Light: {} lux", coral_env::light());
-    println!("Pressure: {} kPa", coral_env::pressure());
+    println!("Temperature: {} °C", coralenv::temperature());
+    println!("Humidity: {} %", coralenv::humidity());
+    println!("Ambient Light: {} lux", coralenv::light());
+    println!("Pressure: {} kPa", coralenv::pressure());
 }

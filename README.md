@@ -11,22 +11,22 @@ The crate bundles together drivers that allow readings from:
 
 # Usage
 
-Simply declare `extern crate coral_env`, then call one of the four functions:
-- `coral_env::temperature()`
-- `coral_env::humidity()`
-- `coral_env::light()`
-- `coral_env::pressure()`
+Simply declare `extern crate coralenv`, then call one of the four functions:
+- `coralenv::temperature()`
+- `coralenv::humidity()`
+- `coralenv::light()`
+- `coralenv::pressure()`
 
 All functions will return a `f32` with the respective reading.
 For example:
 ```
-extern crate coral_env;
+extern crate coralenv;
 
 fn main() {
-    println!("Temperature: {} °C", coral_env::temperature());
-    println!("Humidity: {} %", coral_env::humidity());
-    println!("Ambient Light: {} lux", coral_env::light());
-    println!("Pressure: {} kPa", coral_env::pressure());
+    println!("Temperature: {} °C", coralenv::temperature());
+    println!("Humidity: {} %", coralenv::humidity());
+    println!("Ambient Light: {} lux", coralenv::light());
+    println!("Pressure: {} kPa", coralenv::pressure());
 }
 ```
 
